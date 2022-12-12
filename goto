@@ -1,0 +1,9 @@
+#!/bin/sh
+choice=$(printf "202\\n204\\n210\\n211\\n212\\nHCI\\nSD\\nGP\\nOS\\nAP" | dmenu -i -p "Module?")
+case "$choice" in
+  202|HCI) st -e $SHELL -c "cd /home/dex/lecture-notes/202-HCI/;$SHELL" &  > /dev/null;;
+  204|SD) st -e $SHELL -c "cd /home/dex/lecture-notes/204-soft-design/;$SHELL" &  > /dev/null;;
+  210|GP) st -e $SHELL -c "cd /home/dex/lecture-notes/210-group/;$SHELL" &  > /dev/null;;
+  211|OS) st -e $SHELL -c "cd /home/dex/lecture-notes/211-operating-sys/;$SHELL" &  > /dev/null;;
+  212|AP) st -e $SHELL -c "cd /home/dex/lecture-notes/212-adv-programming/;$SHELL" &  > /dev/null;;
+esac
